@@ -12,14 +12,14 @@ function generateTemplate(name, data, basicElement) {
 
 
 //16.7
-
+var prefix = "https://cors-anywhere.herokuapp.com/";
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
     'X-Client-Id': '4334',
     'X-Auth-Token': '85c74a6f9a8d68f3fe73765d0af3bff6'
 };
 
-fetch(baseUrl + '/board', { headers: myHeaders })
+fetch(prefix + baseUrl + '/board', { headers: myHeaders, cache: "no-store" })
     .then(function(resp) {
         return resp.json();
     })
