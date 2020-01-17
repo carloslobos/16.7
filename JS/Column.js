@@ -23,7 +23,6 @@ function Column(id, name) {
                     headers: myHeaders,
                     body: data,
                 })
-                //PONIŻEJ BYŁO 'res' zamiast 'resp', dopytać, czy literówka :)
                 .then(function(resp) {
                     return resp.json();
                 })
